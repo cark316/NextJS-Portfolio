@@ -56,7 +56,7 @@ const Contact = () => {
           <div className="xl:h-[55%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 from-[#141414] to-black bg-gradient-to-b rounded-xl">
               <h3 className="text-4xl font-bold text-white">
-                Let's work together
+                Let{"'"}s work together
               </h3>
               <p className="text-white/60">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla

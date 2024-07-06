@@ -25,10 +25,12 @@ const about = {
     "I am a web developer based in Pakistan utilizing frameworks such as React and Next.js, curiosity is my main driving force & willingness to learn new things everday.",
   info: [
     { fieldName: "Name", fieldValue: "Saad Ahmad" },
-    { fieldName: "Phone", fieldValue: "(+92) 313 4426513 (+974) 3366 3057" },
+    { fieldName: "Phone", fieldValue: "(+92) 313 4426513" },
     { fieldName: "Email", fieldValue: "saadahmad2111@gmail.com" },
   ],
 };
+
+//(+974) 3366 3057
 
 const skills = {
   title: "My skills",

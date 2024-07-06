@@ -37,52 +37,65 @@ interface Project {
 const projects: Project[] = [
   {
     num: "01",
-    category: "Fullstack",
+    category: "Frontend",
     title: "Project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quas autem qui voluptate eaque ratione. Tempore molestias delectus quos sunt exercitationem, nobis accusamus, sit tenetur porro natus voluptatem distinctio! Temporibus.",
+      "Landing page for e-commerce website Avion, design taken from figma.",
     stack: [
-      { name: "Next.js" },
+      { name: "Vite + React" },
       { name: "TailwindCSS" },
-      { name: "TypeScript" },
-      { name: "Supabase" },
+      { name: "HTML5" },
+      { name: "CSS3" },
     ],
-    image: "/photo.jpg",
-    live: "",
-    github: "",
+    image: "/project1.png",
+    live: "https://avion-project.vercel.app",
+    github: "https://github.com/cark316/Avion",
   },
   {
     num: "02",
     category: "Frontend",
     title: "Project 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quas autem qui voluptate eaque ratione. Tempore molestias delectus quos sunt exercitationem, nobis accusamus, sit tenetur porro natus voluptatem distinctio! Temporibus.",
-    stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "JavaScript" }],
-    image: "/photo.jpg",
-    live: "",
-    github: "",
+      "Landing page for a real estate website Estatein, design taken from figma, only 2 pages were developed and the design is not responsive.",
+    stack: [
+      { name: "Vite + React" },
+      { name: "TailwindCSS" },
+      { name: "Framer Motion" },
+      { name: "JavaScript" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+    ],
+    image: "/project2.png",
+    live: "https://estatein-project.vercel.app/",
+    github: "https://github.com/cark316/EstateinProject",
   },
   {
     num: "03",
-    category: "Frontend",
+    category: "Fullstack CRUD App",
     title: "Project 3",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quas autem qui voluptate eaque ratione. Tempore molestias delectus quos sunt exercitationem, nobis accusamus, sit tenetur porro natus voluptatem distinctio! Temporibus.",
-    stack: [{ name: "React" }, { name: "TailwindCSS" }],
-    image: "/photo.jpg",
-    live: "",
-    github: "",
+      "Fullstack CRUD App created using Vite + React for the Frontend, Node.js + Express.js and MongoDB for the backend.",
+    stack: [
+      { name: "Vite + React" },
+      { name: "TailwindCSS" },
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "MongoDB" },
+    ],
+    image: "/project3.png",
+    live: "null",
+    github: "https://github.com/cark316/CRUD-User-APP",
   },
   {
     num: "04",
     category: "Frontend",
     title: "Project 4",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quas autem qui voluptate eaque ratione. Tempore molestias delectus quos sunt exercitationem, nobis accusamus, sit tenetur porro natus voluptatem distinctio! Temporibus.",
+      "Bouquet website layout implementation in Next.js utilizing TailwindCSS, design from figma.",
     stack: [{ name: "Next.js" }, { name: "TailwindCSS" }],
-    image: "/photo.jpg",
-    live: "",
-    github: "",
+    image: "/project4.png",
+    live: "null",
+    github: "https://github.com/cark316/Kyiv-Boutique-Landing",
   },
 ];
 
@@ -117,7 +130,7 @@ const Work = () => {
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-accent">
+                    <li key={index} className="text-base text-accent">
                       {item.name}
                       {index !== project.stack.length - 1 && ","}
                     </li>
@@ -126,19 +139,21 @@ const Work = () => {
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4 ">
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center">
-                        <BsArrowUpRight className="text-white text-4xl hover:text-accent transition-all duration-250" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                <Link href={project.github}>
+                {project.live !== "null" ? (
+                  <Link href={project.live} target="_blank">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center">
+                          <BsArrowUpRight className="text-white text-4xl hover:text-accent transition-all duration-250" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live Project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                ) : null}
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center">
@@ -169,7 +184,7 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          className="object-cover object-left"
                           alt=""
                         />
                       </div>

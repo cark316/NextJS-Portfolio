@@ -8,15 +8,15 @@ interface SocialsProps {
 }
 
 const socials = [
-  { icon: <FaGithub />, path: "" },
-  { icon: <FaLinkedinIn />, path: "" },
+  { icon: <FaGithub />, path: "https://github.com/cark316" },
+  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/saadahmad21" },
 ];
 
 const Socials: React.FC<SocialsProps> = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
       {socials.map((items, index) => {
-        return <Link href={items.path} key={index} className={iconStyles}>{items.icon}</Link>;
+        return <Link href={items.path} key={index} className={iconStyles} target="_blank">{items.icon}</Link>;
       })}
     </div>
   );

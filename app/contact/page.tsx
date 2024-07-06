@@ -59,10 +59,7 @@ const Contact = () => {
                 Let{"'"}s work together
               </h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                ea sapiente enim error quos eius magni tenetur fugit rem
-                perspiciatis! Tempore reiciendis maxime repellendus fugiat
-                voluptatibus. Tenetur sed molestiae soluta?
+                Have an idea in mind? Let{"'"}s build something that is remarkable and memorable for you and me.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="name" placeholder="Name" />

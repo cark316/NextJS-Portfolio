@@ -17,24 +17,22 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quasi ipsam recusandae illum maiores, voluptas provident ea odit facere, eius optio nostrum consectetur ad error saepe ullam libero illo. Dolor!",
+    "I am a web developer based in Pakistan utilizing frameworks such as React and Next.js, curiosity is my main driving force & willingness to learn new things everday.",
   info: [
     { fieldName: "Name", fieldValue: "Saad Ahmad" },
-    { fieldName: "Phone", fieldValue: "(+92) 313 4426513" },
+    { fieldName: "Phone", fieldValue: "(+92) 313 4426513 (+974) 3366 3057" },
     { fieldName: "Email", fieldValue: "saadahmad2111@gmail.com" },
   ],
 };
 
 const skills = {
   title: "My skills",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis, ipsa ullam nisi nihil laboriosam eveniet corporis magnam incidunt dolore animi nobis? Asperiores voluptatem eligendi doloribus rem ipsa consequatur tempore!",
+  description: "My technicals skills include but are not limited to: ",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -96,13 +94,16 @@ const Resume = () => {
             <TabsContent value="about" className="w-full">
               <div className="flex flex-col gap-8">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 text-sm xl:mx-0 xl:text-base">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="flex flex-col gap-y-6 max-w-[620px]  xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-2 text-xl">
+                      <li
+                        key={index}
+                        className="flex items-center justify-start xl:text-xl gap-2 text-md"
+                      >
                         <span className="text-white/60">{item.fieldName}:</span>
                         <span>{item.fieldValue}</span>
                       </li>

@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 //components
 import Socials from "@/components/Socials";
@@ -18,14 +21,15 @@ const Home = () => {
               <span className="text-accent">Saad Ahmad</span>
             </h1>
             <p className="max-w-[512px] mb-8 text-white/80">
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies.
+              I excel at crafting elegant digital experiences, proficency in a wide range of tools & libraries.
             </p>
             {/* Buttons & Socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="secondary" className="flex items-center gap-2">
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
+                <a href="/resume.pdf" download="resume">
+                  Resume
+                </a>
+                <FiDownload className="text-base" />
               </Button>
               <div>
                 <Socials
@@ -46,3 +50,5 @@ const Home = () => {
 };
 
 export default Home;
+
+// old style
